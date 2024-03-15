@@ -1,5 +1,6 @@
+import Pizza from '../pizza/Pizza'
 
-const pizzaData = [
+export const pizzaData = [
   {
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
@@ -43,3 +44,15 @@ const pizzaData = [
     soldOut: false,
   },
 ];
+
+export default function Menu({menu}) {
+  return(
+    <main className="menu">
+      <h2>OUR MENU:</h2>
+      <p>Authentic Italian cuisine. 6 creative dishes to choose from. All from our stone over, all organic, all delicious.</p>
+      <ul className="pizzas">
+        {menu.map(item => Pizza(item))}
+      </ul>
+    </main>
+  )
+}
