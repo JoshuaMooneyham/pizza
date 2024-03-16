@@ -45,7 +45,7 @@ export const pizzaData = [
   },
 ];
 
-export default function Menu({menu}) {
+export default function Menu({menu=pizzaData}) {
   return(
     <main className="menu">
       <h2>OUR MENU:</h2>
